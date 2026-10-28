@@ -6,7 +6,8 @@ public class Main {
         System.out.println("Bem-vindo à Calculadora de Descontos!");
 
         // Exemplo de uso da CalculadoraDescontoTradicional
-        CalculadoraDescontoTradicional calculadoraTrad = new CalculadoraDescontoTradicional(1200, true);
+        CalculadoraDescontoTradicional calculadoraTrad = new CalculadoraDescontoTradicional();
+        calculadoraTrad.calcularDesconto(1200, true);
         calculadoraTrad.verDesconto();
 
         // Exemplo de uso da CalculadoraDescontoComposta
