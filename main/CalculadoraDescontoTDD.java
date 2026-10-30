@@ -1,12 +1,15 @@
 package main;
 
 public class CalculadoraDescontoTDD {
-    private double valor;
-    private boolean clienteVip;
-    private double desconto;
 
     public CalculadoraDescontoTDD() {}
 
+    public double CalcularDesconto(double valor) {
+        if (valor > 500) {
+            return valor - (valor * 0.10);
+        }
 
-    
+        return 0;
+    }
+
 }

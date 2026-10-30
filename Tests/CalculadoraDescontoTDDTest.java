@@ -12,6 +12,6 @@ public class CalculadoraDescontoTDDTest {
 
         CalculadoraDescontoTDD calc = new CalculadoraDescontoTDD();
 
-        assertEquals(490, calc.CalcularDesconto(501, false), 0.001);
+        assertEquals(450.9, calc.CalcularDesconto(501), 0.001);
     }
 }
