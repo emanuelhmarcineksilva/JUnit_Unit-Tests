@@ -48,7 +48,7 @@ public class CalculadoraDescontoTradicional {
 
     public void verDesconto() {
         // descontos aplicados e o valor final do produto com desconto.
-        System.out.println("Valor do produto antes do desconto: R$ " + valorProduto);
+        System.out.println("\n\n\nValor do produto antes do desconto: R$ " + valorProduto);
         System.out.println("Cliente VIP: " + (clienteVIP ? "Sim" : "Não"));
         System.out.println("Valor final do produto com desconto: R$ " + calcularDesconto(valorProduto, clienteVIP));
         //valor do desconto

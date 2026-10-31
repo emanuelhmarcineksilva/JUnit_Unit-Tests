@@ -10,6 +10,7 @@ public class Main {
         calculadoraTrad.calcularDesconto(1200, true);
         calculadoraTrad.verDesconto();
 
+        // Exemplo de uso da CalculadoraDescontoTDD
         CalculadoraDescontoTDD calculadoraTDD = new CalculadoraDescontoTDD();
         calculadoraTDD.calcularDesconto(4000, true);
         calculadoraTDD.verDesconto();
