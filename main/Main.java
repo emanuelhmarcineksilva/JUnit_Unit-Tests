@@ -10,6 +10,12 @@ public class Main {
         calculadoraTrad.calcularDesconto(1200, true);
         calculadoraTrad.verDesconto();
 
+        CalculadoraDescontoTDD calculadoraTDD = new CalculadoraDescontoTDD();
+        calculadoraTDD.calcularDesconto(4000, true);
+        calculadoraTDD.verDesconto();
+        calculadoraTDD.calcularDesconto(4000, false);
+        calculadoraTDD.verDesconto();
+
         
     }
 }

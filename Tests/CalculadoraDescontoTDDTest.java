@@ -12,7 +12,7 @@ public class CalculadoraDescontoTDDTest {
 
         CalculadoraDescontoTDD calc = new CalculadoraDescontoTDD();
 
-        assertEquals(450.9, calc.CalcularDesconto(501, false), 0.001);
+        assertEquals(450.9, calc.calcularDesconto(501, false), 0.001);
     }
 
     @Test 
@@ -20,7 +20,7 @@ public class CalculadoraDescontoTDDTest {
 
         CalculadoraDescontoTDD calc = new CalculadoraDescontoTDD();
 
-        assertEquals(800.8, calc.CalcularDesconto(1001, false), 0.001);
+        assertEquals(800.8, calc.calcularDesconto(1001, false), 0.001);
 
     }
 
@@ -35,21 +35,21 @@ public class CalculadoraDescontoTDDTest {
     public void AplicarDescontoCompostosComClientesVip() {
         CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
 
-        assertEquals(1520, cal.CalcularDesconto(2000, true), 0.001);
+        assertEquals(1520, cal.calcularDesconto(2000, true), 0.001);
     }
 
     @Test
     public void TaxaFixaDeFreteParaValoresMenorQue100() {
         CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
 
-        assertEquals(100, cal.CalcularDesconto(85, false), 0.001);
+        assertEquals(100, cal.calcularDesconto(85, false), 0.001);
     }
 
     @Test
     public void TaxaFixaDeFreteParaValoresMenorQue100ParaClienteVip() {
         CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
 
-        assertEquals(100, cal.CalcularDesconto(89.47, true), 0.01);
+        assertEquals(100, cal.calcularDesconto(89.47, true), 0.01);
     }
 
     @Test 
@@ -57,7 +57,7 @@ public class CalculadoraDescontoTDDTest {
         CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
 
         assertThrows(IllegalArgumentException.class, () -> {
-            cal.CalcularDesconto(-10, false);
+            cal.calcularDesconto(-10, false);
         });
     }
 
@@ -66,7 +66,7 @@ public class CalculadoraDescontoTDDTest {
         CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
 
         assertThrows(IllegalArgumentException.class, () -> {
-            cal.CalcularDesconto(0, false);
+            cal.calcularDesconto(0, false);
         });
     }
 
