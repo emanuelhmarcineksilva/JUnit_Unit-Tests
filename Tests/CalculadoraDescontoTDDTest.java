@@ -52,4 +52,22 @@ public class CalculadoraDescontoTDDTest {
         assertEquals(100, cal.CalcularDesconto(89.47, true), 0.01);
     }
 
+    @Test 
+    public void RetornarExecaoParaValoresNegativos() {
+        CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            cal.CalcularDesconto(-10, false);
+        });
+    }
+
+    @Test 
+    public void RetornarExecaoParaOValorZero() {
+        CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            cal.CalcularDesconto(0, false);
+        });
+    }
+
 }
