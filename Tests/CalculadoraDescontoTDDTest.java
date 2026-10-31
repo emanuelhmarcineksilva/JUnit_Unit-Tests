@@ -12,7 +12,7 @@ public class CalculadoraDescontoTDDTest {
 
         CalculadoraDescontoTDD calc = new CalculadoraDescontoTDD();
 
-        assertEquals(450.9, calc.CalcularDesconto(501), 0.001);
+        assertEquals(450.9, calc.CalcularDesconto(501, false), 0.001);
     }
 
     @Test 
@@ -20,7 +20,7 @@ public class CalculadoraDescontoTDDTest {
 
         CalculadoraDescontoTDD calc = new CalculadoraDescontoTDD();
 
-        assertEquals(800.8, calc.CalcularDesconto(1001), 0.001);
+        assertEquals(800.8, calc.CalcularDesconto(1001, false), 0.001);
 
     }
 
@@ -30,4 +30,13 @@ public class CalculadoraDescontoTDDTest {
 
         assertEquals(95, cal.descontoVip(100), 0.001);
     }
+
+    @Test 
+    public void AplicarDescontoCompostosComClientesVip() {
+        CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
+
+        assertEquals(1520, cal.CalcularDesconto(2000, true), 0.001);
+    }
+
+    
 }
