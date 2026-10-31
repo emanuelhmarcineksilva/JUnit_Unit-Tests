@@ -8,10 +8,13 @@ public class CalculadoraDescontoTDD {
 
     public double CalcularDesconto(double valor, boolean clienteVip) {
         
+        valorComDesconto = valor;
+
+
         if (valor > 1000) {
-            valorComDesconto = valor - (valor * 0.20);
+            valorComDesconto -= (valor * 0.20);
         } else if (valor > 500) {
-            valorComDesconto = valor - (valor * 0.10);
+            valorComDesconto -= (valor * 0.10);
         }
 
         if (clienteVip) {
