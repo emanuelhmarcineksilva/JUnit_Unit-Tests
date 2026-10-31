@@ -2,14 +2,17 @@ package main;
 
 public class CalculadoraDescontoTDD {
 
+    private double valorComDesconto;
+
     public CalculadoraDescontoTDD() {}
 
     public double CalcularDesconto(double valor) {
+        
         if (valor > 500) {
-            return valor - (valor * 0.10);
+            valorComDesconto = valor - (valor * 0.10);
         }
 
-        return 0;
+        return valorComDesconto;
     }
 
 }
