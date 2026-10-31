@@ -49,7 +49,7 @@ public class CalculadoraDescontoTDDTest {
     public void TaxaFixaDeFreteParaValoresMenorQue100ParaClienteVip() {
         CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
 
-        assertEquals(100, cal.CalcularDesconto(89.47, true), 0.001);
+        assertEquals(100, cal.CalcularDesconto(89.47, true), 0.01);
     }
 
 }

@@ -18,6 +18,10 @@ public class CalculadoraDescontoTDD {
             valorComDesconto = descontoVip(valorComDesconto);
         }
 
+        if (valorComDesconto < 100) {
+            valorComDesconto += 15;
+        }
+
         return valorComDesconto;
     }
 
@@ -25,6 +29,6 @@ public class CalculadoraDescontoTDD {
         return v - (v * 0.05);
     }
 
-    
+
 
 }
