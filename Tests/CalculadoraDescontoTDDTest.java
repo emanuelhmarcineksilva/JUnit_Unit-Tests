@@ -21,6 +21,13 @@ public class CalculadoraDescontoTDDTest {
         CalculadoraDescontoTDD calc = new CalculadoraDescontoTDD();
 
         assertEquals(800.8, calc.CalcularDesconto(1001), 0.001);
-        
+
+    }
+
+    @Test 
+    public void AplicarDesconto5PorcentParaClientesVip() {
+        CalculadoraDescontoTDD cal = new CalculadoraDescontoTDD();
+
+        assertEquals(95, cal.descontoVip(100), 0.001);
     }
 }
