@@ -7,6 +7,10 @@ public class CalculadoraDescontoTDD {
     public CalculadoraDescontoTDD() {}
 
     public double CalcularDesconto(double valor, boolean clienteVip) {
+
+        if (valor <= 0) {
+            throw new IllegalArgumentException("Valor do produto inválido. O valor deve ser maior que zero.");
+        }
         
         valorComDesconto = valor;
 
@@ -32,7 +36,7 @@ public class CalculadoraDescontoTDD {
         return v - (v * 0.05);
     }
 
-    
+
 
 
 
